@@ -8,8 +8,8 @@ const userSchema = new Schema({
   },
   email: {
     type: String,
-    required: [true, "email required"],
-    unique: [true, "email already registered"],
+    required: [true, "the email field is required"],
+    unique: [true, "the email you choose is already registered"],
   },
   firstName: String,
   lastName: String,
