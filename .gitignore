@@ -1,28 +1,5 @@
-# dependencies
-.vscode
 node_modules
-.pnp
-.pnp.js
-
-# testing
-coverage
-cypress
-
-# production
-dist
 build
-public/js/*
-
-# misc
-.DS_Store
-.config.js
+npm-debug.log
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.vercel
+.DS_Store
