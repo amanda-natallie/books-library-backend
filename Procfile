@@ -1,1 +1,1 @@
-web: node src/server.mjs
+web: nodemon src/server.mjs
