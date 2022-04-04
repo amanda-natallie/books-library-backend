@@ -4,10 +4,12 @@ import Book from "./bookSchema.mjs";
 
 export default {
   async create(req, res, next) {
+    console.info("bookService.create", req.body);
     try {
       const { name, image, description } = req.body;
 
-      if (!name) return res.status(400).json({ msg: "name is required!" });
+      if (!name)
+        return res.status(400).json({ msg: "the book name is required!" });
 
       const bookData = {
         _id: uuidv4(),
