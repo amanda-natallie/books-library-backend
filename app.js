@@ -9,7 +9,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 
 var app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 dotenv.config({ path: "./config/config.env" });
 // Connect to mongodb
 // mongoose.connect("mongodb://localhost/book_list",{
@@ -36,7 +36,7 @@ app.use(
   })
 );
 
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors());
 
 // Passport middleware
 app.use(passport.initialize());
@@ -46,5 +46,4 @@ app.use(require("./routes/index"));
 app.use("/auth", require("./routes/auth"));
 app.use(require("./routes/book"));
 
-// app.listen(3000, '192.168.101.9');
 app.listen(PORT, console.log(`listening at ${PORT}`));

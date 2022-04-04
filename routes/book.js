@@ -39,6 +39,17 @@ router
         res.redirect("/");
       })
       .catch((err) => console.log(err));
+  })
+  .get("/books", (req, res) => {
+    const info = Book_model.find();
+    console.log(info);
+    res.send(info);
+  })
+  .get("/book/:_id", (req, res) => {
+    const { _id } = req.params;
+    const info = Book_model.find({ _id });
+    console.log(info);
+    res.send(info);
   });
 
 module.exports = router;
